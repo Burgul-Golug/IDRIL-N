@@ -1,3 +1,14 @@
 <resources>
-    <string name="app_name">IDRIL-N</string>
+    <string name="app_name">Idril</string>
+    <string name="shop">my favourite shop</string>
+    <string name="Email"> Email</string>
+    <string name="Password"> Password</string>
+    <string name="Confirm_password"> Confirm password again</string>
+    <string name="description_hanger">hanger</string>
+    <string name="description_idril">Idril</string>
+    <string name="login">Login</string>
+    <string name="Sign_up">Sign up</string>
+    <string name="Registration">Register</string>
+    <string name="Name_user">Nickname</string>
+    <string name="Name_category">Name_category</string>
 </resources>
