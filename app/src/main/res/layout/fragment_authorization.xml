@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    >
+
+    <ImageView
+        android:id="@+id/hanger"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/idril"
+        android:contentDescription="@string/description_idril"/>
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="40dp"
+        android:hint="@string/Email"
+        android:inputType="textEmailAddress"
+        android:minHeight="48dp"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:autofillHints="emailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="30sp"
+        android:inputType="textPassword"
+        android:hint="@string/Password"
+        android:minHeight="48dp"
+        android:textAlignment="textStart"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
+        android:textSize="25sp"
+        android:autofillHints="password"/>
+
+    <Button
+        android:id="@+id/Login"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginHorizontal="85sp"
+        android:layout_marginTop="35sp"
+        android:backgroundTint="@color/black"
+        android:text="@string/login"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        tools:targetApi="lollipop" />
+
+</LinearLayout>
