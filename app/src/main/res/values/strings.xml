@@ -11,4 +11,12 @@
     <string name="Registration">Register</string>
     <string name="Name_user">Nickname</string>
     <string name="Name_category">Name_category</string>
+    <string name="Profile">Профиль</string>
+    <string name="userName">Имя</string>
+    <string name="enter">Применить</string>
+    <string name="profilename">ProfileName</string>
+    <string name="ours_brands">Наши бренды</string>
+    <string name="Search">Поиск</string>
+    <string name="brandname">Brandname</string>
+    <string name="Reviews">Отзывы</string>
 </resources>
