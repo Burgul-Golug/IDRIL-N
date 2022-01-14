@@ -9,14 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Idril">
-        <activity android:name=".activity.AuthorizationActivity"/>
-        <activity android:name=".activity.ReviewsActivity"/>
-        <activity android:name=".activity.RegistrationActivity"/>
-        <activity android:name=".activity.ProductsActivity"/>
-        <activity android:name=".activity.SplashActivity"/>
-
         <activity
-            android:name=".activity.BrandsActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

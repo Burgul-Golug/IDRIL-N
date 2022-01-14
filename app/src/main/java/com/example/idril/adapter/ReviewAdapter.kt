@@ -18,7 +18,7 @@ class ReviewAdapter (
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ReviewVH {
         val layoutInflater = LayoutInflater.from(parent.context)
         return ReviewVH(
-            layoutInflater.inflate(R.layout.item_product, parent, false),
+            layoutInflater.inflate(R.layout.item_review, parent, false),
             listener
         )
     }
@@ -34,9 +34,9 @@ class ReviewAdapter (
         listener: OnReviewClickListener
     ) : RecyclerView.ViewHolder(view) {
 
-        private val user_name = view.findViewById<TextView>(R.id.User_name)
+        private val userName = view.findViewById<TextView>(R.id.user_namE)
         private val rating = view.findViewById<TextView>(R.id.personRating)
-        private val product_desc = view.findViewById<TextView>(R.id.comments_text)
+        private val productDesc = view.findViewById<TextView>(R.id.comments_text)
 
         private lateinit var review: Review
 
@@ -46,9 +46,9 @@ class ReviewAdapter (
 
         fun bind(review: Review) {
             this.review = review
-            user_name.text = review.user_name
+            userName.text = review.userName
             rating.text = review.rating
-            product_desc.text = review.product_desc
+            productDesc.text = review.product_desc
         }
     }
 }

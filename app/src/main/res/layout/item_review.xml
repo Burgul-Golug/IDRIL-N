@@ -14,7 +14,7 @@
         android:background="@color/backgroundLight">
 
         <TextView
-            android:id="@+id/User_name"
+            android:id="@+id/user_namE"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
@@ -40,23 +40,24 @@
             android:id="@+id/personRating"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="200dp"
+            android:layout_marginStart="300dp"
             android:layout_marginTop="15dp"
             android:text="X"
             android:textColor="@color/black"
             android:textSize="24sp"
-            app:layout_constraintStart_toEndOf="@+id/User_name"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
             android:id="@+id/star"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="15dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginTop="15dp"
             android:src="@drawable/ic_star"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@+id/rating"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/comments"
@@ -69,7 +70,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/User_name" />
+            app:layout_constraintTop_toBottomOf="@+id/user_namE" />
 
         <TextView
             android:id="@+id/comments_text"
