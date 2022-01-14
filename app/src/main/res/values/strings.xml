@@ -20,4 +20,6 @@
     <string name="brandname">Brandname</string>
     <string name="Reviews">Отзывы</string>
     <string name="error">Внимание, ошибка!</string>
+    <string name="error_connect">Ошибка соединения!</string>
+    <string name="Reload">Обновить</string>
 </resources>
