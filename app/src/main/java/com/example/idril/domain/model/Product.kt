@@ -1,4 +1,4 @@
-package com.example.idril.model
+package com.example.idril.domain.model
 
 import kotlinx.serialization.Serializable
 

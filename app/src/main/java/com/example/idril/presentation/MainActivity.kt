@@ -1,12 +1,12 @@
-package com.example.idril
+package com.example.idril.presentation
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
+import com.example.idril.R
 import com.example.idril.databinding.ActivityMainBinding
-import com.example.idril.fragments.BrandsFragment
-import com.example.idril.fragments.ProductsFragment
+import com.example.idril.presentation.fragments.BrandsFragment
 
 class MainActivity : FragmentActivity() {
         fun navigateToFragment(fmt: Fragment) {

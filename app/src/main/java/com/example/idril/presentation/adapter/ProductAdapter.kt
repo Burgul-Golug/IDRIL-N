@@ -1,4 +1,4 @@
-package com.example.idril.adapter
+package com.example.idril.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,7 +8,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.idril.R
-import com.example.idril.model.Product
+import com.example.idril.domain.model.Product
 
 typealias OnProductClickListener = (Product) -> Unit
 
