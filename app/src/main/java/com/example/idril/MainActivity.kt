@@ -6,6 +6,7 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity
 import com.example.idril.databinding.ActivityMainBinding
 import com.example.idril.fragments.BrandsFragment
+import com.example.idril.fragments.ProductsFragment
 
 class MainActivity : FragmentActivity() {
         fun navigateToFragment(fmt: Fragment) {

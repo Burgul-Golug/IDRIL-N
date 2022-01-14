@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.bumptech.glide.Glide
 import com.example.idril.R
 import com.example.idril.model.Brand
 
@@ -48,7 +49,12 @@ class BrandAdapter (
             this.brand = brand
             nameBrand.text = brand.brand_name
             descBrand.text = brand.brand_desc
-            imageBrand.setImageResource(brand.brand_img)
+            Glide
+                .with(itemView)
+                .load(brand.brand_img_URL)
+                .centerCrop()
+                .placeholder(R.drawable.hanger)
+                .into(imageBrand)
         }
     }
 }
