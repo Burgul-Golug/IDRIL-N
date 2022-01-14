@@ -1,9 +1,9 @@
-package com.example.idril.fragments
+package com.example.idril.presentation.fragments
 
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
-import com.example.idril.MainActivity
+import com.example.idril.presentation.MainActivity
 import com.example.idril.R
 import com.example.idril.databinding.FragmentAuthorizationBinding
 

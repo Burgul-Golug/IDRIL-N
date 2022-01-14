@@ -1,4 +1,4 @@
-package com.example.idril.fragments
+package com.example.idril.presentation.fragments
 
 import android.os.Bundle
 import android.view.View
@@ -7,15 +7,15 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.idril.R
-import com.example.idril.ScreenState
-import com.example.idril.network.NetworkService
+import com.example.idril.presentation.ScreenState
+import com.example.idril.data.network.NetworkService
 import com.example.idril.onClickFlow
 import com.example.idril.onRefreshFlow
-import com.example.idril.*
-import com.example.idril.adapter.BrandAdapter
+import com.example.idril.presentation.adapter.BrandAdapter
 import com.example.idril.databinding.FragmentBrandsBinding
-import com.example.idril.model.Brand
-import com.example.idril.model.Product
+import com.example.idril.domain.model.Brand
+import com.example.idril.presentation.MainActivity
+import com.example.idril.presentation.viewmodel.BrandsViewModel
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.*
 import kotlinx.serialization.ExperimentalSerializationApi
@@ -29,6 +29,8 @@ class BrandsFragment : Fragment(R.layout.fragment_brands)  {
     companion object{
         fun newInstance() = BrandsFragment()
     }
+
+    private val brandsViewModel by lazy { BrandsViewModel(requireContext(), lifecycleScope)}
 
     private fun setLoading(isLoading: Boolean) = with(binding) {
         progressBar.isVisible = isLoading && !rvBrands.isVisible
@@ -69,6 +71,7 @@ class BrandsFragment : Fragment(R.layout.fragment_brands)  {
         )
             .flatMapLatest {loadBrands()}
             .distinctUntilChanged()
+            brandsViewModel.screenState
             .onEach{
                 when(it){
                     is ScreenState.DataLoaded -> {
@@ -89,6 +92,16 @@ class BrandsFragment : Fragment(R.layout.fragment_brands)  {
             }
             .launchIn(lifecycleScope)
 
+        if(savedInstanceState == null){
+            brandsViewModel.loadData()
+        }
+        binding.RefreshBrands.setOnRefreshListener {
+            brandsViewModel.loadData()
+        }
+        binding.RefreshBrands.setOnRefreshListener {
+            brandsViewModel.loadData()
+        }
+
     }
     @ExperimentalSerializationApi
     private fun loadBrands() = flow {
@@ -100,4 +113,5 @@ class BrandsFragment : Fragment(R.layout.fragment_brands)  {
         .catch{
             emit(ScreenState.Error(getString(R.string.error_connect)))
         }
+
 }

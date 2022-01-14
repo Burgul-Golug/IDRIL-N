@@ -1,15 +1,15 @@
-package com.example.idril.fragments
+package com.example.idril.presentation.fragments
 
 import android.graphics.Color
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.idril.MainActivity
+import com.example.idril.presentation.MainActivity
 import com.example.idril.R
-import com.example.idril.adapter.ReviewAdapter
+import com.example.idril.presentation.adapter.ReviewAdapter
 import com.example.idril.databinding.FragmentReviewsBinding
-import com.example.idril.network.NetworkService
+import com.example.idril.data.network.NetworkService
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.*
 import kotlinx.serialization.ExperimentalSerializationApi

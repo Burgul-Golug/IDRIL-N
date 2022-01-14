@@ -1,8 +1,8 @@
-package com.example.idril.network
+package com.example.idril.data.network
 
-import com.example.idril.model.Brand
-import com.example.idril.model.Product
-import com.example.idril.model.Review
+import com.example.idril.domain.model.Brand
+import com.example.idril.domain.model.Product
+import com.example.idril.domain.model.Review
 import retrofit2.http.GET
 
 interface RestApi {

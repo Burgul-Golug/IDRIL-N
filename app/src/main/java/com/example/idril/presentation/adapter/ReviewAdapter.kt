@@ -1,4 +1,4 @@
-package com.example.idril.adapter
+package com.example.idril.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -6,7 +6,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.idril.R
-import com.example.idril.model.Review
+import com.example.idril.domain.model.Review
 
 typealias OnReviewClickListener = (Review) -> Unit
 

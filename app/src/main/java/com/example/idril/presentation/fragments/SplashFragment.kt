@@ -1,4 +1,4 @@
-package com.example.idril.fragments
+package com.example.idril.presentation.fragments
 
 import android.os.Bundle
 import android.view.View
