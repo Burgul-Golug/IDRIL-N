@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/main_shade_1"
+    android:background="@color/background"
     android:paddingHorizontal="15dp">
 
     <EditText
@@ -29,7 +29,7 @@
         android:background="@color/white"
         android:src="@drawable/ic_search"
         app:layout_constraintStart_toEndOf="@id/searchString"
-        app:layout_constraintBottom_toTopOf="@id/rvProduct"/>
+        app:layout_constraintBottom_toTopOf="@id/RefreshProducts"/>
 
     <TextView
         android:id="@+id/Brandname"
@@ -65,15 +65,28 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="SpeakableTextPresentCheck" />
 
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/RefreshProducts"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@+id/searchString"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="10dp">
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvProduct"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
-        app:layout_constraintTop_toBottomOf="@+id/searchString"
-        app:layout_constraintBottom_toBottomOf="parent"
         tools:itemCount="5"
         tools:listitem="@layout/item_product"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

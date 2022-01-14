@@ -1,9 +1,10 @@
 package com.example.idril.model
 
-import androidx.annotation.DrawableRes
+import kotlinx.serialization.Serializable
 
+@Serializable
 data class Product(
-    @DrawableRes val product_image: Int,
+    val product_image_URL: String,
     val product_name : String,
     val product_price: String,
     val product_color: String,
